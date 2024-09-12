@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remortalite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+          --colorPurple: #7833ff; /*#4B0FFF; /*#7547FF; #8d66ff;*/
+          --colorOrange: #ffff99;
+          --colorPink:   #e080ff;
+        }
+
+        #logo-second-letter {
+            color: var(--colorPurple);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" style="height: 100vh;">
+        <div class="row h-100">
+
+
+            <div class="col-8 bg-dark text-light p-5">
+                <a class="navbar-brand" href="#">
+                    <h1 class="logo display-4 pb-5" style="font-variant: small-caps; letter-spacing: 0.13em;">
+                        r<span id="logo-second-letter">e</span>mortalite
+                    </h1>
+                </a>
+                {% block content_left %}
+                {% endblock %}
+            </div>
+
+
+            <div class="col-4 bg-light text-dark p-5">
+                <br>
+                {% block content_right %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

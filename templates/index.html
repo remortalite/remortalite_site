@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content_left %}
+<div class="justify-center">
+    <code class="fs-4">whoami:</code>
+    <h1 class="display-5 py-2">Роман Маланов</h1>
+</div>
+<code class="fs-4">where:</code>
+<h4 class="h4 py-2">Новосибирск</h4>
+
+<code class="fs-4">ls:</code>
+
+{% for project in projects %}
+<h3 class="py-2 pb-0"><a href="{{ project.link }}">{{ project.name }}</a></h3>
+<p class="lead">Stack: [{{ project.stack_str|lower }}]</p>
+<p>{{ project.description }}</p>
+<ul>
+    {% for skill in project.skills %}
+    <li>{{ skill }}</li>
+    {% endfor %}
+</ul>
+{% endfor %}
+
+
+{% endblock content_left %}
+
+{% block content_right %}
+<code class="fs-4">cat:</code>
+<div class="fs-4">
+    <p class="pt-2">
+        > telegram: <a href="https://t.me/remalanov">https://t.me/remalanov</a>,
+    </p>
+    <p>
+        > mail: <a href="mailto:remortalite@gmail.com">remortalite@gmail.com</a>,
+    </p>
+</div>
+{% endblock content_right %}
