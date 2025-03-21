@@ -3,3 +3,6 @@ build:
 
 run:
 	docker run -it -p 443:443 rem_site
+
+run-daemon:
+	docker run -it -d -p 443:443 rem_site
